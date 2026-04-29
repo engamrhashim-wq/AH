@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المهندس عمرو هاشم | مستشار هندسي وإدارة معدات ثقيلة</title>
+  <meta
+    name="description"
+    content="الموقع الشخصي للمهندس عمرو هاشم، مستشار هندسي وخبير استراتيجي في إدارة عمليات المعدات الثقيلة والتحول الرقمي وريادة الأعمال التقنية."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&family=Inter:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --navy: #07111f;
+      --navy-2: #101c2b;
+      --steel: #2a3340;
+      --steel-2: #586270;
+      --paper: #f6f2ea;
+      --paper-2: #e7e0d3;
+      --ink: #0b1320;
+      --muted: #697484;
+      --line: rgba(255, 255, 255, 0.16);
+      --dark-line: rgba(10, 19, 32, 0.12);
+      --gold: #d7a446;
+      --gold-2: #f3c56c;
+      --orange: #e56d24;
+      --cyan: #5fd7ef;
+      --shadow: 0 22px 60px rgba(6, 14, 24, 0.24);
+      --max: 1200px;
+      --radius: 8px;
+      --header: 74px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      max-width: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      width: 100%;
+      max-width: 100%;
+      font-family: "IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+      color: #eef4f8;
+      background: var(--navy);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.28;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(180deg, #000 0%, transparent 74%);
+      z-index: -1;
+    }
+
+    img,
+    video {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 80;
+      background: rgba(7, 17, 31, 0.86);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      min-height: var(--header);
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      color: #17110a;
+      background: linear-gradient(135deg, var(--gold-2), var(--orange));
+      border-radius: 6px;
+      font-family: Inter, sans-serif;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand small {
+      display: block;
+      margin-top: -5px;
+      color: #aebdcb;
+      font-size: 0.72rem;
+      font-weight: 600;
+      direction: ltr;
+      text-align: right;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .site-nav a {
+      padding: 8px 10px;
+      color: #c9d4df;
+      font-size: 0.92rem;
+      border-radius: 6px;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus-visible {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+      outline: 0;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.06);
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      margin: 4px auto;
+      background: currentColor;
+    }
+
+    .quick-contact {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 8px 14px;
+      border: 1px solid rgba(215, 164, 70, 0.48);
+      border-radius: 6px;
+      color: #161006;
+      background: linear-gradient(135deg, var(--gold-2), var(--gold));
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .lang-btn {
+      background: rgba(255, 255, 255, 0.08);
+      color: #c9d4df;
+      border-color: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      font-family: Inter, sans-serif;
+    }
+
+    .lang-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .hero {
+      position: relative;
+      min-height: calc(88svh - var(--header));
+      display: grid;
+      align-items: center;
+      isolation: isolate;
+      overflow: hidden;
+      background-image:
+        linear-gradient(90deg, rgba(7, 17, 31, 0.95) 0%, rgba(7, 17, 31, 0.78) 42%, rgba(7, 17, 31, 0.18) 76%),
+        url("/assets/%D9%85%D8%B9%D8%B1%D8%B6%20%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%86%20%D8%A8%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9-BTV7yJTD.png");
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 38%;
+      background: linear-gradient(0deg, var(--navy) 0%, transparent 100%);
+      z-index: -1;
+    }
+
+    .hero-content {
+      width: min(760px, calc(100% - 36px));
+      margin-left: max(18px, calc((100vw - var(--max)) / 2));
+      padding: 78px 0 58px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      color: var(--gold-2);
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 36px;
+      height: 2px;
+      background: currentColor;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    .hero h1 {
+      margin-bottom: 14px;
+      font-size: clamp(2.6rem, 6vw, 5.8rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .hero-subtitle {
+      max-width: 680px;
+      margin-bottom: 22px;
+      color: #d7e0ea;
+      font-size: clamp(1.08rem, 2vw, 1.45rem);
+      font-weight: 600;
+    }
+
+    .hero-quote {
+      position: relative;
+      max-width: 760px;
+      margin: 26px 0 30px;
+      padding: 18px 20px;
+      border-right: 4px solid var(--gold);
+      color: #fff7e6;
+      background: rgba(7, 17, 31, 0.52);
+      box-shadow: var(--shadow);
+      font-size: clamp(1rem, 1.5vw, 1.22rem);
+      font-weight: 600;
+    }
+
+    .hero-actions,
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 10px 16px;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-2px);
+      outline: 0;
+    }
+
+    .btn-primary {
+      color: #17110a;
+      background: linear-gradient(135deg, var(--gold-2), var(--orange));
+      box-shadow: 0 14px 34px rgba(229, 109, 36, 0.24);
+    }
+
+    .btn-secondary {
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.36);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .btn-dark {
+      color: #fff;
+      background: #101a28;
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .section {
+      padding: 84px 0;
+    }
+
+    .section.light {
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, rgba(246, 242, 234, 0.98), rgba(231, 224, 211, 0.98)),
+        var(--paper);
+    }
+
+    .section.dark {
+      color: #eef4f8;
+      background:
+        linear-gradient(180deg, rgba(7, 17, 31, 0.96), rgba(16, 28, 43, 0.98)),
+        var(--navy-2);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(260px, 0.55fr);
+      align-items: end;
+      gap: 34px;
+      margin-bottom: 34px;
+    }
+
+    .section-title {
+      margin-bottom: 0;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    .section-copy {
+      margin-bottom: 0;
+      color: inherit;
+      opacity: 0.78;
+      font-size: 1.04rem;
+    }
+
+    .kpi-section {
+      padding: 22px 0 74px;
+      background: var(--navy);
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .kpi {
+      min-height: 184px;
+      padding: 22px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(160deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04)),
+        rgba(16, 28, 43, 0.84);
+      box-shadow: var(--shadow);
+    }
+
+    .kpi-value {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      margin-bottom: 10px;
+      font-family: Inter, "IBM Plex Sans Arabic", sans-serif;
+      color: var(--gold-2);
+      font-size: clamp(2.6rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1;
+      direction: ltr;
+      justify-content: flex-end;
+    }
+
+    .kpi-value small {
+      font-size: 0.46em;
+      color: #dce8f3;
+    }
+
+    .kpi h2 {
+      margin-bottom: 8px;
+      font-size: 1.18rem;
+    }
+
+    .kpi p {
+      margin-bottom: 0;
+      color: #bdc9d6;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .feature-card,
+    .timeline-item,
+    .training-card,
+    .tech-panel,
+    .gallery-card,
+    .contact-panel,
+    .certificate-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--dark-line);
+      background: rgba(255, 255, 255, 0.72);
+      box-shadow: 0 18px 44px rgba(10, 19, 32, 0.12);
+    }
+
+    .dark .feature-card,
+    .dark .timeline-item,
+    .dark .training-card,
+    .dark .tech-panel,
+    .dark .gallery-card,
+    .dark .certificate-card {
+      border-color: var(--line);
+      background: rgba(255, 255, 255, 0.07);
+      box-shadow: var(--shadow);
+    }
+
+    .feature-card {
+      display: grid;
+      grid-template-rows: 260px 1fr;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 26px 70px rgba(10, 19, 32, 0.22);
+    }
+
+    .feature-media {
+      position: relative;
+      min-height: 0;
+      background: var(--steel);
+    }
+
+    .feature-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .feature-badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      padding: 7px 10px;
+      border-radius: 5px;
+      color: #15110a;
+      background: var(--gold-2);
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .feature-body {
+      padding: 24px;
+    }
+
+    .feature-body h3 {
+      margin-bottom: 10px;
+      font-size: clamp(1.4rem, 2.4vw, 2rem);
+    }
+
+    .feature-body p {
+      margin-bottom: 16px;
+      color: var(--muted);
+    }
+
+    .dark .feature-body p {
+      color: #bfccda;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      padding: 6px 9px;
+      border-radius: 5px;
+      color: #192231;
+      background: rgba(215, 164, 70, 0.2);
+      border: 1px solid rgba(215, 164, 70, 0.28);
+      font-size: 0.84rem;
+      font-weight: 800;
+    }
+
+    .dark .tag {
+      color: #fff4dd;
+      background: rgba(215, 164, 70, 0.16);
+    }
+
+    .marquee {
+      margin-bottom: 34px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      gap: 12px;
+      padding: 14px;
+      animation: marquee 26s linear infinite;
+    }
+
+    .logo-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: max-content;
+      padding: 12px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 6px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .logo-pill span {
+      color: var(--gold-2);
+      font-family: Inter, sans-serif;
+      direction: ltr;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(50%); }
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .timeline-item {
+      padding: 20px;
+      min-height: 230px;
+    }
+
+    .timeline-item time {
+      display: inline-flex;
+      margin-bottom: 12px;
+      color: var(--gold-2);
+      font-family: Inter, sans-serif;
+      font-weight: 800;
+      direction: ltr;
+    }
+
+    .timeline-item h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .timeline-item p {
+      margin-bottom: 0;
+      color: #bfccda;
+    }
+
+    .split-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.75fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .training-grid,
+    .brand-grid,
+    .tech-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .training-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .training-card {
+      padding: 20px;
+    }
+
+    .training-card h3 {
+      margin-bottom: 8px;
+      color: var(--ink);
+      font-size: 1.12rem;
+    }
+
+    .training-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .doc-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 36px;
+      margin-top: 14px;
+      padding: 7px 12px;
+      border-radius: 6px;
+      color: #15100a;
+      background: rgba(215, 164, 70, 0.22);
+      border: 1px solid rgba(215, 164, 70, 0.48);
+      font-weight: 800;
+    }
+
+    .doc-link:hover,
+    .doc-link:focus-visible {
+      background: rgba(215, 164, 70, 0.34);
+      outline: 0;
+    }
+
+    .brand-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .brand-chip {
+      display: grid;
+      place-items: center;
+      min-height: 82px;
+      padding: 12px;
+      border-radius: 6px;
+      color: var(--ink);
+      background: #fff;
+      border: 1px solid var(--dark-line);
+      box-shadow: 0 12px 30px rgba(10, 19, 32, 0.08);
+      font-family: Inter, "IBM Plex Sans Arabic", sans-serif;
+      font-weight: 800;
+      text-align: center;
+      direction: ltr;
+    }
+
+    .certificate-stack {
+      display: grid;
+      gap: 12px;
+    }
+
+    .certificate-card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+    }
+
+    .certificate-card p {
+      margin: 0;
+      padding: 12px 14px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .tech-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .tech-panel {
+      min-height: 210px;
+      padding: 22px;
+      position: relative;
+    }
+
+    .tech-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.18;
+      background-image:
+        linear-gradient(90deg, transparent 0 46%, rgba(95, 215, 239, 0.7) 47% 48%, transparent 49%),
+        linear-gradient(0deg, transparent 0 46%, rgba(215, 164, 70, 0.7) 47% 48%, transparent 49%);
+      background-size: 38px 38px;
+      pointer-events: none;
+    }
+
+    .tech-panel h3,
+    .tech-panel p,
+    .tech-panel .tag-row {
+      position: relative;
+    }
+
+    .tech-panel h3 {
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+    }
+
+    .tech-panel p {
+      color: #bfccda;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: 180px;
+      gap: 12px;
+    }
+
+    .gallery-card {
+      position: relative;
+      padding: 0;
+      border: 0;
+      cursor: pointer;
+      color: #fff;
+      background: var(--steel);
+    }
+
+    .gallery-card:nth-child(1),
+    .gallery-card:nth-child(6) {
+      grid-column: span 6;
+      grid-row: span 2;
+    }
+
+    .gallery-card:nth-child(2),
+    .gallery-card:nth-child(3),
+    .gallery-card:nth-child(4),
+    .gallery-card:nth-child(5) {
+      grid-column: span 3;
+    }
+
+    .gallery-card:nth-child(n+7) {
+      grid-column: span 6;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.28s ease, filter 0.28s ease;
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.04);
+      filter: saturate(1.12) contrast(1.04);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      inset: auto 0 0;
+      padding: 28px 16px 14px;
+      background: linear-gradient(0deg, rgba(7, 17, 31, 0.88), transparent);
+      text-align: right;
+      font-weight: 800;
+    }
+
+    .media-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .media-row video {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: #000;
+    }
+
+    .contact-panel {
+      padding: 28px;
+      color: var(--ink);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.64)),
+        var(--paper);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .contact-item {
+      padding: 14px;
+      border: 1px solid var(--dark-line);
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.58);
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .contact-item a {
+      color: var(--ink);
+      font-weight: 800;
+      direction: ltr;
+      unicode-bidi: plaintext;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 10px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      border: 1px solid var(--dark-line);
+      border-radius: 6px;
+      padding: 12px 14px;
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.76);
+    }
+
+    .contact-form textarea {
+      min-height: 132px;
+      resize: vertical;
+    }
+
+    .light .eyebrow {
+      color: #7f5515;
+    }
+
+    .light .section-copy {
+      color: var(--muted);
+      opacity: 1;
+    }
+
+    footer {
+      padding: 26px 0 38px;
+      color: #b7c4d1;
+      text-align: center;
+      background: var(--navy);
+      border-top: 1px solid var(--line);
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 120;
+      display: none;
+      place-items: center;
+      padding: 22px;
+      background: rgba(3, 8, 14, 0.88);
+    }
+
+    .lightbox.open {
+      display: grid;
+    }
+
+    .lightbox figure {
+      width: min(1040px, 100%);
+      margin: 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #050b13;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .lightbox img {
+      width: 100%;
+      max-height: 78vh;
+      object-fit: contain;
+      background: #050b13;
+    }
+
+    .lightbox figcaption {
+      padding: 12px 16px;
+      color: #fff;
+      font-weight: 800;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+      cursor: pointer;
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    @media (max-width: 1050px) {
+      .header-inner {
+        grid-template-columns: auto auto auto;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .site-nav {
+        position: absolute;
+        top: var(--header);
+        left: 18px;
+        right: 18px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: rgba(7, 17, 31, 0.96);
+        box-shadow: var(--shadow);
+      }
+
+      .site-header.open .site-nav {
+        display: flex;
+      }
+
+      .site-nav a {
+        padding: 12px;
+      }
+
+      .section-head,
+      .split-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .tech-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      :root {
+        --header: 66px;
+      }
+
+      .container {
+        width: min(var(--max), calc(100% - 28px));
+      }
+
+      .header-inner {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 10px;
+      }
+
+      .brand small,
+      .quick-contact {
+        display: none;
+      }
+
+      .brand {
+        min-width: 0;
+        max-width: 100%;
+      }
+
+      .brand > span:last-child {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .menu-toggle {
+        grid-column: 2;
+      }
+
+      .hero {
+        min-height: auto;
+        background-image:
+          linear-gradient(180deg, rgba(7, 17, 31, 0.48) 0%, rgba(7, 17, 31, 0.92) 44%, rgba(7, 17, 31, 0.98) 100%),
+          url("/assets/%D9%85%D8%B9%D8%B1%D8%B6%20%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%86%20%D8%A8%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9-BTV7yJTD.png");
+        background-position: 76% top;
+      }
+
+      .hero-content {
+        width: calc(100% - 28px);
+        max-width: calc(100vw - 28px);
+        margin: 0 auto;
+        padding: 42px 0 54px;
+        overflow: hidden;
+      }
+
+      .eyebrow {
+        display: flex;
+        width: 100%;
+        max-width: calc(100vw - 28px);
+        font-size: 0.72rem;
+        line-height: 1.45;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        white-space: normal;
+      }
+
+      .eyebrow::before {
+        width: 24px;
+        flex: 0 0 24px;
+      }
+
+      .hero h1 {
+        max-width: 100%;
+        font-size: clamp(1.8rem, 8vw, 2.35rem);
+        line-height: 1.16;
+        overflow-wrap: anywhere;
+      }
+
+      .hero-subtitle {
+        max-width: 100%;
+        font-size: 1rem;
+      }
+
+      .hero-quote {
+        padding: 14px;
+        font-size: 0.96rem;
+      }
+
+      .hero-actions .btn {
+        flex: 1 1 100%;
+      }
+
+      .kpi-grid,
+      .cards-grid,
+      .training-grid,
+      .brand-grid,
+      .media-row {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 250px;
+      }
+
+      .gallery-card,
+      .gallery-card:nth-child(1),
+      .gallery-card:nth-child(6),
+      .gallery-card:nth-child(n) {
+        grid-column: auto;
+        grid-row: auto;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="العودة إلى بداية الصفحة">
+        <span class="brand-mark">AH</span>
+        <span>
+          عمرو هاشم
+          <small>Heavy Equipment Strategy</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="روابط الموقع">
+        <a href="#kpis">المؤشرات</a>
+        <a href="#projects">المشاريع</a>
+        <a href="#experience">الخبرات</a>
+        <a href="#training">التدريب</a>
+        <a href="#tech">التكنولوجيا</a>
+        <a href="#gallery">المعرض</a>
+        <a href="#contact">التواصل</a>
+      </nav>
+      <button id="langToggle" class="quick-contact lang-btn" type="button" aria-label="Toggle Language">English</button>
+      <a class="quick-contact" href="https://wa.me/966533196540">واتساب</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="فتح القائمة" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="الواجهة الرئيسية">
+      <div class="hero-content reveal">
+        <div class="eyebrow">Engineering Leadership | AI Operations | Heavy Equipment</div>
+        <h1>المهندس عمرو هاشم</h1>
+        <p class="hero-subtitle">
+          مستشار هندسي، خبير استراتيجي في إدارة عمليات المعدات الثقيلة، ورائد أعمال تقني.
+        </p>
+        <blockquote class="hero-quote">
+          "القيادة الفعالة لا تقتصر على الحفاظ على دوران المحركات، بل تتمثل في دمج الهندسة بالإدارة، وتحويل كل معدة إلى أصل استراتيجي يحقق أعلى قيمة للشركات، عبر تحول رقمي ذكي وعمليات مستدامة."
+        </blockquote>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">تواصل معي</a>
+          <a class="btn btn-secondary" href="#projects">تصفح المشاريع المبتكرة</a>
+          <a class="btn btn-secondary" href="#gallery">معرض الأعمال</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="kpi-section" id="kpis" aria-label="مؤشرات الأداء والخبرة">
+      <div class="container">
+        <div class="kpi-grid">
+          <article class="kpi reveal">
+            <div class="kpi-value"><small>+</small><span data-counter="20">0</span></div>
+            <h2>عاماً من الخبرة التراكمية</h2>
+            <p>تميز هندسي وإدارة أصول في المشاريع القومية وبيئات التشغيل عالية الضغط.</p>
+          </article>
+          <article class="kpi reveal">
+            <div class="kpi-value"><span data-counter="85">0</span><small>%</small></div>
+            <h2>جاهزية وكفاءة المعدات</h2>
+            <p>استهداف معدل Equipment Uptime يعكس معيار الموثوقية العالية للأساطيل المنتجة.</p>
+          </article>
+          <article class="kpi reveal">
+            <div class="kpi-value"><span data-counter="20">0</span><small>% -</small><span data-counter="30">0</span><small>%</small></div>
+            <h2>خفض التكاليف التشغيلية</h2>
+            <p>تقليل الهدر وتحسين الاستخدام عبر ممارسات تشغيل وصيانة منضبطة.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">ريادة الأعمال والمشاريع المبتكرة</div>
+            <h2 class="section-title">من التجارة التقليدية إلى سوق معدات ذكي.</h2>
+          </div>
+          <p class="section-copy">
+            مشاريع تجمع خبرة الموقع، فهم دورة حياة الأصل، وتطبيق الذكاء الاصطناعي في قرارات التأجير والتجارة وقطع الغيار.
+          </p>
+        </div>
+        <div class="cards-grid">
+          <article class="feature-card reveal">
+            <div class="feature-media">
+              <img src="/assets/%D9%85%D9%86%D8%B5%D8%A9%20%D8%B9%D8%A8%D8%B1-D-M89XM3.png" alt="لوحة بيانات ذكاء اصطناعي للمعدات الثقيلة" loading="lazy" />
+              <span class="feature-badge">AI Powered</span>
+            </div>
+            <div class="feature-body">
+              <h3>منصة عبر (Abrx)</h3>
+              <p>
+                منصة ذكية لتجارة وتأجير المعدات الثقيلة وقطع الغيار، تعتمد على الذكاء الاصطناعي لنقل الصناعة من التجارة التقليدية إلى المستقبل الذكي.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Market</span>
+                <span class="tag">Rentals</span>
+                <span class="tag">Parts</span>
+                <span class="tag">AI Matching</span>
+              </div>
+            </div>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-media">
+              <img src="/assets/promo-ajr-equipment-commercial-BuuBPWQq-BuuBPWQq.jpg" alt="إعلان شركة آجر لتأجير المعدات" loading="lazy" />
+              <span class="feature-badge">Start Strong</span>
+            </div>
+            <div class="feature-body">
+              <h3>شركة آجر (AJR)</h3>
+              <p>
+                شركة متخصصة في تأجير المعدات تحت مظلة شركة عبر الخليج، تحمل شعار "أسطولك جاهز... آجر بذكاء" لتقديم حلول تأجير مرنة وفعالة.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Rental Fleet</span>
+                <span class="tag">Operations</span>
+                <span class="tag">Utilization</span>
+                <span class="tag">Smart Leasing</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">شركاء النجاح والتدرج القيادي</div>
+            <h2 class="section-title">مسار قيادي بدأ من الورشة وصعد إلى إدارة الأساطيل.</h2>
+          </div>
+          <p class="section-copy">
+            خبرة عملية مع شركات ومشاريع كبرى، من ميكانيكا المعدات إلى إدارة الورش المركزية ومحطات المشاريع القومية وإدارة المعدات والشاحنات الثقيلة.
+          </p>
+        </div>
+
+        <div class="marquee reveal" aria-label="شركاء النجاح">
+          <div class="marquee-track">
+            <span class="logo-pill"><span>AC</span> شركة المقاولون العرب</span>
+            <span class="logo-pill"><span>SADIM</span> سديم المجد للمقاولات</span>
+            <span class="logo-pill"><span>MASAR</span> شركة المسار الحديث</span>
+            <span class="logo-pill"><span>ABR</span> عبر الخليج للتجارة</span>
+            <span class="logo-pill"><span>AJR</span> آجر لتأجير المعدات</span>
+            <span class="logo-pill"><span>AC</span> The Arab Contractors</span>
+            <span class="logo-pill"><span>SADIM</span> Sadim Almajad Contracting</span>
+            <span class="logo-pill"><span>MASAR</span> Al Masar Al Hadith</span>
+            <span class="logo-pill"><span>ABR</span> Abr Alkhalij Company</span>
+            <span class="logo-pill"><span>AJR</span> Equipment Rental</span>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <time>2006 - 2010</time>
+            <h3>مهندس ميكانيكا</h3>
+            <p>بداية ميدانية في صيانة المعدات الثقيلة وفهم سلوك الأعطال ودورة التشغيل اليومية.</p>
+          </article>
+          <article class="timeline-item reveal">
+            <time>2010 - 2014</time>
+            <h3>مدير ورشة ومحطات طرق</h3>
+            <p>قيادة ورش مركزية ومحطات مشاريع خارجية، مع إدارة فرق ومعدات في بيئات تشغيل متعددة.</p>
+          </article>
+          <article class="timeline-item reveal">
+            <time>2014 - 2023</time>
+            <h3>مشاريع قومية ودولية (المقاولون العرب)</h3>
+            <p>إدارة معدات إنشاء الطرق ومشاريع كبرى مثل محطة الضبعة وطريق القاهرة - كيب تاون، وعمليات دولية بدولتي ليبيا وإثيوبيا.</p>
+          </article>
+          <article class="timeline-item reveal">
+            <time>2023 - 2026</time>
+            <h3>مدير إدارة المعدات والشاحنات الثقيلة</h3>
+            <p>قيادة تطوير الأساطيل ورفع الجاهزية وتحويل المعدات إلى أصول استراتيجية قابلة للنمو.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light" id="training">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">التدريب الاحترافي وماركات المعدات</div>
+            <h2 class="section-title">تأهيل إداري وتقني مبني على معايير عالمية.</h2>
+          </div>
+          <p class="section-copy">
+            يجمع المسار التدريبي بين إدارة الأصول والصيانة والموثوقية وإدارة المشاريع، مع خبرة تقنية على ماركات عالمية في المعدات والشاحنات.
+          </p>
+        </div>
+
+        <div class="split-grid">
+          <div>
+            <div class="training-grid">
+              <article class="training-card reveal">
+                <h3>MBA - Digital Transformation</h3>
+                <p>دراسة ماجستير إدارة الأعمال في التحول الرقمي، لربط التكنولوجيا باستراتيجيات الأعمال.</p>
+                <a class="doc-link" href="assets/%D8%AA%D8%B3%D8%AC%D9%8A%D9%84%20%D8%A7%D9%84%D9%85%D8%A7%D8%AC%D8%B3%D8%AA%D9%8A%D8%B1%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%AD%D9%88%D9%84%20%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A.pdf" target="_blank" rel="noopener">ملف تسجيل الماجستير</a>
+              </article>
+              <article class="training-card reveal">
+                <h3>ISO 55001</h3>
+                <p>أساسيات نظام إدارة الأصول وتحويل الأصل إلى قيمة قابلة للقياس.</p>
+              </article>
+              <article class="training-card reveal">
+                <h3>CAMA</h3>
+                <p>مقيّم إدارة الأصول الاستراتيجي وربط القرار الفني بالعائد التشغيلي.</p>
+              </article>
+              <article class="training-card reveal">
+                <h3>CMRP</h3>
+                <p>الصيانة والموثوقية وتحسين زمن التوقف واستقرار الأداء.</p>
+              </article>
+              <article class="training-card reveal">
+                <h3>PMP</h3>
+                <p>إدارة المشاريع ومتابعة التنفيذ والموارد والمخاطر ضمن إطار احترافي.</p>
+              </article>
+            </div>
+
+            <div class="brand-grid" style="margin-top: 18px;">
+              <span class="brand-chip">CAT</span>
+              <span class="brand-chip">Komatsu</span>
+              <span class="brand-chip">Volvo</span>
+              <span class="brand-chip">Iveco</span>
+              <span class="brand-chip">Mercedes</span>
+              <span class="brand-chip">Vögele</span>
+            </div>
+          </div>
+
+          <aside class="certificate-stack">
+            <article class="certificate-card reveal">
+              <img src="/assets/linkedin-sce-consultant-accreditation-C9zM_eNo-C9zM_eNo.jpg" alt="اعتماد الهيئة السعودية للمهندسين بدرجة مستشار" loading="lazy" />
+              <p>اعتماد مهني: مهندس ميكانيكا بدرجة مستشار من الهيئة السعودية للمهندسين.</p>
+            </article>
+            <article class="certificate-card reveal">
+              <img src="/assets/linkedin-sce-maintenance-certificate-CStjg1Lx-CStjg1Lx.jpg" alt="شهادة الاحتراف في إدارة الصيانة" loading="lazy" />
+              <p>تدريب احترافي في إدارة الصيانة من الهيئة السعودية للمهندسين.</p>
+            </article>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="tech">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">الأنظمة والتكنولوجيا</div>
+            <h2 class="section-title">من التحكم اللحظي إلى الصيانة التنبؤية.</h2>
+          </div>
+          <p class="section-copy">
+            منظومة تشغيل رقمية تربط بيانات الأسطول، تخطيط الموارد، تحليل الأداء، والذكاء الاصطناعي لاتخاذ قرارات أدق وأسرع.
+          </p>
+        </div>
+
+        <div class="tech-grid">
+          <article class="tech-panel reveal">
+            <h3>ERP وموارد التشغيل</h3>
+            <p>تخطيط موارد ومتابعة تكاليف وقرارات تشغيل عبر SAP وMicrosoft Dynamics وOdoo.</p>
+            <div class="tag-row">
+              <span class="tag">SAP</span>
+              <span class="tag">Dynamics</span>
+              <span class="tag">Odoo</span>
+            </div>
+          </article>
+          <article class="tech-panel reveal">
+            <h3>تحليل بيانات الأسطول</h3>
+            <p>قياس الجاهزية والاستهلاك والتوقف وربط المؤشرات الفنية بربحية الأصل.</p>
+            <div class="tag-row">
+              <span class="tag">Uptime</span>
+              <span class="tag">Fuel</span>
+              <span class="tag">Utilization</span>
+            </div>
+          </article>
+          <article class="tech-panel reveal">
+            <h3>ذكاء اصطناعي وصيانة تنبؤية</h3>
+            <p>استخدام AI لاكتشاف الأنماط، تقليل الأعطال المفاجئة، وتحسين توقيت الصيانة.</p>
+            <div class="tag-row">
+              <span class="tag">AI</span>
+              <span class="tag">Predictive</span>
+              <span class="tag">Reliability</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light" id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">معرض العمليات</div>
+            <h2 class="section-title">حضور ميداني من نيوم إلى العلا والبيئات الصحراوية الصعبة.</h2>
+          </div>
+          <p class="section-copy">
+            صور تشغيلية لأساطيل الجرافات والشاحنات، عمليات الحفر الليلية، تمهيد الطرق، وخطوط الخنادق في مواقع مختلفة.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <button class="gallery-card reveal" type="button" data-full="assets/معرض التعدين بالسعودية.png" data-caption="معرض التعدين بالسعودية">
+            <img src="/assets/%D9%85%D8%B9%D8%B1%D8%B6%20%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%86%20%D8%A8%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9-BTV7yJTD.png" alt="معرض التعدين بالسعودية" loading="lazy" />
+            <span class="gallery-caption">معرض التعدين بالسعودية</span>
+          </button>
+          <button class="gallery-card reveal" type="button" data-full="assets/معرض تطوير قطاع المقاولات بمصر.jpg" data-caption="معرض تطوير قطاع المقاولات بمصر">
+            <img src="/assets/%D9%85%D8%B9%D8%B1%D8%B6%20%D8%AA%D8%B7%D9%88%D9%8A%D8%B1%20%D9%82%D8%B7%D8%A7%D8%B9%20%D8%A7%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA%20%D8%A8%D9%85%D8%B5%D8%B1-CMibF8l8.jpg" alt="معرض تطوير قطاع المقاولات بمصر" loading="lazy" />
+            <span class="gallery-caption">معرض تطوير قطاع المقاولات بمصر</span>
+          </button>
+          <button class="gallery-card reveal" type="button" data-full="assets/موقع اثيوبيا.jpg" data-caption="موقع إثيوبيا">
+            <img src="/assets/%D9%85%D9%88%D9%82%D8%B9%20%D8%A7%D8%AB%D9%8A%D9%88%D8%A8%D9%8A%D8%A7-ZLAQGdFc.jpg" alt="موقع إثيوبيا" loading="lazy" />
+            <span class="gallery-caption">موقع إثيوبيا</span>
+          </button>
+          <button class="gallery-card reveal" type="button" data-full="assets/تدريب فولفو بالسويد.jpg" data-caption="تدريب فولفو بالسويد">
+            <img src="/assets/%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8%20%D9%81%D9%88%D9%84%D9%81%D9%88%20%D8%A8%D8%A7%D9%84%D8%B3%D9%88%D9%8A%D8%AF-B1zLVs0n.jpg" alt="تدريب فولفو بالسويد" loading="lazy" />
+            <span class="gallery-caption">تدريب فولفو بالسويد</span>
+          </button>
+          <button class="gallery-card reveal" type="button" data-full="assets/تعاون مع شركات صينية لتوريد قطع الغيار.jpg" data-caption="تعاون مع شركات صينية">
+            <img src="/assets/%D8%AA%D8%B9%D8%A7%D9%88%D9%86%20%D9%85%D8%B9%20%D8%B4%D8%B1%D9%83%D8%A7%D8%AA%20%D8%B5%D9%8A%D9%86%D9%8A%D8%A9%20%D9%84%D8%AA%D9%88%D8%B1%D9%8A%D8%AF%20%D9%82%D8%B7%D8%B9%20%D8%A7%D9%84%D8%BA%D9%8A%D8%A7%D8%B1-DXtP1iNz.jpg" alt="تعاون مع شركات صينية" loading="lazy" />
+            <span class="gallery-caption">تعاون مع شركات صينية</span>
+          </button>
+          <button class="gallery-card reveal" type="button" data-full="assets/تعاون موردين عالمين.jpg" data-caption="تعاون مع موردين عالميين">
+            <img src="/assets/%D8%AA%D8%B9%D8%A7%D9%88%D9%86%20%D9%85%D9%88%D8%B1%D8%AF%D9%8A%D9%86%20%D8%B9%D8%A7%D9%84%D9%85%D9%8A%D9%86-BJU0nHo0.jpg" alt="تعاون مع موردين عالميين" loading="lazy" />
+            <span class="gallery-caption">تعاون مع موردين عالميين</span>
+          </button>
+          <button class="gallery-card reveal" type="button" data-full="assets/linkedin-neom-truck-loading-D3lBv4eA.jpg" data-caption="تحميل شاحنات في مشروع صحراوي">
+            <img src="/assets/linkedin-neom-truck-loading-D3lBv4eA-D3lBv4eA.jpg" alt="حفارات تحمل شاحنات في الصحراء" loading="lazy" />
+            <span class="gallery-caption">تحميل الشاحنات</span>
+          </button>
+          <button class="gallery-card reveal" type="button" data-full="assets/field_team.png" data-caption="فرق تشغيل وتدريب ميداني">
+            <img src="/assets/field_team-CXGAQziP.png" alt="فريق ميداني بجانب معدات ثقيلة" loading="lazy" />
+            <span class="gallery-caption">فرق التشغيل</span>
+          </button>
+        </div>
+
+        <div class="media-row" aria-label="مقاطع فيديو تشغيلية">
+          <video controls muted preload="metadata" poster="/assets/linkedin-ai-heavy-industry-VaBX4Z5_-VaBX4Z5_.jpg">
+            <source src="/assets/video-futuristic-heavy-equipment-ad-bjiR96T9-bjiR96T9.mp4" type="video/mp4" />
+          </video>
+          <video controls muted preload="metadata" poster="/assets/promo-ajr-equipment-commercial-BuuBPWQq-BuuBPWQq.jpg">
+            <source src="/assets/video-promo-1-GLaK2DBS-GLaK2DBS.mp4" type="video/mp4" />
+          </video>
+          <video controls muted preload="metadata" poster="/assets/linkedin-abr-equipment-rental-brand-ChysQBPp-ChysQBPp.jpg">
+            <source src="/assets/video-whatsapp-ai-operations-BcxxXBJ5-BcxxXBJ5.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light" id="contact">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div class="contact-grid">
+            <div>
+              <div class="eyebrow">التواصل</div>
+              <h2 class="section-title">جاهز للتعاون في إدارة الأصول، تشغيل الأساطيل، والتحول الرقمي.</h2>
+              <p class="section-copy">
+                يمكن التواصل مباشرة عبر واتساب أو البريد الإلكتروني لمناقشة الاستشارات الهندسية، تطوير عمليات المعدات، أو مشاريع المنصات التقنية.
+              </p>
+              <div class="contact-list">
+                <div class="contact-item">
+                  <strong>الهاتف / واتساب - السعودية</strong>
+                  <a href="https://wa.me/966533196540">+966 53 319 6540</a>
+                </div>
+                <div class="contact-item">
+                  <strong>الهاتف / واتساب - مصر</strong>
+                  <a href="https://wa.me/201101100291">+20 11 0110 0291</a>
+                </div>
+                <div class="contact-item">
+                  <strong>البريد الإلكتروني</strong>
+                  <a href="mailto:eng.amrhashim@gmail.com">eng.amrhashim@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-actions" style="margin-top: 18px;">
+                <a class="btn btn-primary" href="mailto:eng.amrhashim@gmail.com">إرسال بريد</a>
+                <a class="btn btn-dark" href="https://wa.me/966533196540">تواصل واتساب</a>
+              </div>
+            </div>
+
+            <form class="contact-form" action="mailto:eng.amrhashim@gmail.com" method="post" enctype="text/plain">
+              <input type="text" name="name" placeholder="الاسم" required />
+              <input type="email" name="email" placeholder="البريد الإلكتروني" required />
+              <textarea name="message" placeholder="اكتب رسالتك" required></textarea>
+              <button class="btn btn-primary" type="submit">إرسال الرسالة</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      المهندس عمرو هاشم - مستشار هندسي وإدارة عمليات المعدات الثقيلة والتحول الرقمي
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="عرض الصورة">
+    <button class="lightbox-close" type="button" aria-label="إغلاق">×</button>
+    <figure>
+      <img src="" alt="" id="lightboxImage" />
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const siteHeader = document.getElementById("siteHeader");
+
+    menuToggle.addEventListener("click", () => {
+      const open = siteHeader.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(open));
+    });
+
+    document.querySelectorAll(".site-nav a").forEach((link) => {
+      link.addEventListener("click", () => {
+        siteHeader.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+
+    document.querySelectorAll(".reveal").forEach((item) => revealObserver.observe(item));
+
+    const counters = document.querySelectorAll("[data-counter]");
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = Number(el.dataset.counter);
+        const duration = 1100;
+        const start = performance.now();
+
+        function tick(now) {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.round(target * eased);
+          if (progress < 1) requestAnimationFrame(tick);
+        }
+
+        requestAnimationFrame(tick);
+        counterObserver.unobserve(el);
+      });
+    }, { threshold: 0.7 });
+
+    counters.forEach((counter) => counterObserver.observe(counter));
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxCaption = document.getElementById("lightboxCaption");
+    const closeLightbox = document.querySelector(".lightbox-close");
+
+    document.querySelectorAll(".gallery-card").forEach((button) => {
+      button.addEventListener("click", () => {
+        lightboxImage.src = button.dataset.full;
+        lightboxImage.alt = button.dataset.caption;
+        lightboxCaption.textContent = button.dataset.caption;
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+      });
+    });
+
+    function closeGallery() {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImage.src = "";
+    }
+
+    closeLightbox.addEventListener("click", closeGallery);
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) closeGallery();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && lightbox.classList.contains("open")) closeGallery();
+    });
+
+    // Translation logic for bilingual support
+    const dict = {
+      ".brand span:not(.brand-mark)": { ar: "عمرو هاشم<small>Heavy Equipment Strategy</small>", en: "Amr Hashim<small>Heavy Equipment Strategy</small>" },
+      ".site-nav a[href='#kpis']": { ar: "المؤشرات", en: "KPIs" },
+      ".site-nav a[href='#projects']": { ar: "المشاريع", en: "Projects" },
+      ".site-nav a[href='#experience']": { ar: "الخبرات", en: "Experience" },
+      ".site-nav a[href='#training']": { ar: "التدريب", en: "Training" },
+      ".site-nav a[href='#tech']": { ar: "التكنولوجيا", en: "Technology" },
+      ".site-nav a[href='#gallery']": { ar: "المعرض", en: "Gallery" },
+      ".site-nav a[href='#contact']": { ar: "التواصل", en: "Contact" },
+      "a.quick-contact[href^='https://wa']": { ar: "واتساب", en: "WhatsApp" },
+      ".hero .eyebrow": { ar: "Engineering Leadership | AI Operations | Heavy Equipment", en: "Engineering Leadership | AI Operations | Heavy Equipment" },
+      ".hero h1": { ar: "المهندس عمرو هاشم", en: "Eng. Amr Hashim" },
+      ".hero-subtitle": { ar: "مستشار هندسي، خبير استراتيجي في إدارة عمليات المعدات الثقيلة، ورائد أعمال تقني.", en: "Engineering Consultant, Heavy Equipment Operations Strategist, & Tech Entrepreneur." },
+      ".hero-quote": { ar: "\"القيادة الفعالة لا تقتصر على الحفاظ على دوران المحركات، بل تتمثل في دمج الهندسة بالإدارة، وتحويل كل معدة إلى أصل استراتيجي يحقق أعلى قيمة للشركات، عبر تحول رقمي ذكي وعمليات مستدامة.\"", en: "\"Effective leadership isn't just about keeping engines running; it's about integrating engineering with management, transforming every machine into a strategic asset through smart digital transformation and sustainable operations.\"" },
+      ".hero-actions a:nth-child(1)": { ar: "تواصل معي", en: "Contact Me" },
+      ".hero-actions a:nth-child(2)": { ar: "تصفح المشاريع المبتكرة", en: "View Innovative Projects" },
+      ".hero-actions a:nth-child(3)": { ar: "معرض الأعمال", en: "Gallery" },
+      ".kpi:nth-child(1) h2": { ar: "عاماً من الخبرة التراكمية", en: "Years of Cumulative Experience" },
+      ".kpi:nth-child(1) p": { ar: "تميز هندسي وإدارة أصول في المشاريع القومية وبيئات التشغيل عالية الضغط.", en: "Engineering excellence and asset management in national projects and high-pressure environments." },
+      ".kpi:nth-child(2) h2": { ar: "جاهزية وكفاءة المعدات", en: "Equipment Uptime & Efficiency" },
+      ".kpi:nth-child(2) p": { ar: "استهداف معدل Equipment Uptime يعكس معيار الموثوقية العالية للأساطيل المنتجة.", en: "Targeting high Equipment Uptime reflecting high reliability for productive fleets." },
+      ".kpi:nth-child(3) h2": { ar: "خفض التكاليف التشغيلية", en: "Operational Cost Reduction" },
+      ".kpi:nth-child(3) p": { ar: "تقليل الهدر وتحسين الاستخدام عبر ممارسات تشغيل وصيانة منضبطة.", en: "Minimizing waste and optimizing utilization through disciplined operations and maintenance." },
+      "#projects .eyebrow": { ar: "ريادة الأعمال والمشاريع المبتكرة", en: "Entrepreneurship & Innovative Projects" },
+      "#projects .section-title": { ar: "من التجارة التقليدية إلى سوق معدات ذكي.", en: "From Traditional Trading to a Smart Equipment Market." },
+      "#projects .section-copy": { ar: "مشاريع تجمع خبرة الموقع، فهم دورة حياة الأصل، وتطبيق الذكاء الاصطناعي في قرارات التأجير والتجارة وقطع الغيار.", en: "Projects combining site experience, asset lifecycle understanding, and AI application in rental, trading, and spare parts decisions." },
+      ".feature-card:nth-child(1) h3": { ar: "منصة عبر (Abrx)", en: "Abrx Platform" },
+      ".feature-card:nth-child(1) p": { ar: "منصة ذكية لتجارة وتأجير المعدات الثقيلة وقطع الغيار، تعتمد على الذكاء الاصطناعي لنقل الصناعة من التجارة التقليدية إلى المستقبل الذكي.", en: "A smart platform for heavy equipment and parts trading/rentals, using AI to transition the industry into a smart future." },
+      ".feature-card:nth-child(2) h3": { ar: "شركة آجر (AJR)", en: "AJR Company" },
+      ".feature-card:nth-child(2) p": { ar: "شركة متخصصة في تأجير المعدات تحت مظلة شركة عبر الخليج، تحمل شعار \"أسطولك جاهز... آجر بذكاء\" لتقديم حلول تأجير مرنة وفعالة.", en: "An equipment rental company under Abr Alkhalij, operating with the motto 'Your fleet is ready... Rent smart' to provide flexible rental solutions." },
+      "#experience .eyebrow": { ar: "شركاء النجاح والتدرج القيادي", en: "Success Partners & Leadership Progression" },
+      "#experience .section-title": { ar: "مسار قيادي بدأ من الورشة وصعد إلى إدارة الأساطيل.", en: "A Leadership Path from the Workshop to Fleet Management." },
+      "#experience .section-copy": { ar: "خبرة عملية مع شركات ومشاريع كبرى، من ميكانيكا المعدات إلى إدارة الورش المركزية ومحطات المشاريع القومية وإدارة المعدات والشاحنات الثقيلة.", en: "Practical experience with major companies and projects, from equipment mechanics to central workshop management, national project stations, and heavy fleet management." },
+      ".timeline-item:nth-child(1) h3": { ar: "مهندس ميكانيكا", en: "Mechanical Engineer" },
+      ".timeline-item:nth-child(1) p": { ar: "بداية ميدانية في صيانة المعدات الثقيلة وفهم سلوك الأعطال ودورة التشغيل اليومية.", en: "Field start in heavy equipment maintenance, understanding breakdown behavior and daily operating cycles." },
+      ".timeline-item:nth-child(2) h3": { ar: "مدير ورشة ومحطات طرق", en: "Workshop & Station Manager" },
+      ".timeline-item:nth-child(2) p": { ar: "قيادة ورش مركزية ومحطات مشاريع خارجية، مع إدارة فرق ومعدات في بيئات تشغيل متعددة.", en: "Leading central workshops and external project stations, managing teams and equipment in diverse operational environments." },
+      ".timeline-item:nth-child(3) h3": { ar: "مشاريع قومية ودولية (المقاولون العرب)", en: "National & International Projects (Arab Contractors)" },
+      ".timeline-item:nth-child(3) p": { ar: "إدارة معدات إنشاء الطرق ومشاريع كبرى مثل محطة الضبعة وطريق القاهرة - كيب تاون، وعمليات دولية بدولتي ليبيا وإثيوبيا.", en: "Managing road construction equipment and major projects like the El Dabaa plant and Cairo-Cape Town road, plus international operations in Libya and Ethiopia." },
+      ".timeline-item:nth-child(4) h3": { ar: "مدير إدارة المعدات والشاحنات الثقيلة", en: "Heavy Trucks & Equipment Dept Manager" },
+      ".timeline-item:nth-child(4) p": { ar: "قيادة تطوير الأساطيل ورفع الجاهزية وتحويل المعدات إلى أصول استراتيجية قابلة للنمو.", en: "Leading fleet development, raising readiness, and transforming equipment into scalable strategic assets." },
+      "#training .eyebrow": { ar: "التدريب الاحترافي وماركات المعدات", en: "Professional Training & Equipment Brands" },
+      "#training .section-title": { ar: "تأهيل إداري وتقني مبني على معايير عالمية.", en: "Administrative and Technical Qualification Built on Global Standards." },
+      "#training .section-copy": { ar: "يجمع المسار التدريبي بين إدارة الأصول والصيانة والموثوقية وإدارة المشاريع، مع خبرة تقنية على ماركات عالمية في المعدات والشاحنات.", en: "The training path combines asset management, maintenance, reliability, and project management with technical expertise on global equipment and truck brands." },
+      ".training-card:nth-child(1) p": { ar: "دراسة ماجستير إدارة الأعمال في التحول الرقمي، لربط التكنولوجيا باستراتيجيات الأعمال.", en: "MBA in Digital Transformation, linking technology with business strategies." },
+      ".training-card:nth-child(1) .doc-link": { ar: "ملف تسجيل الماجستير", en: "MBA Registration File" },
+      ".training-card:nth-child(2) p": { ar: "أساسيات نظام إدارة الأصول وتحويل الأصل إلى قيمة قابلة للقياس.", en: "Basics of the asset management system and transforming the asset into measurable value." },
+      ".training-card:nth-child(3) p": { ar: "مقيّم إدارة الأصول الاستراتيجي وربط القرار الفني بالعائد التشغيلي.", en: "Strategic asset management assessor, linking technical decisions to operational returns." },
+      ".training-card:nth-child(4) p": { ar: "الصيانة والموثوقية وتحسين زمن التوقف واستقرار الأداء.", en: "Maintenance, reliability, optimizing downtime, and stabilizing performance." },
+      ".training-card:nth-child(5) p": { ar: "إدارة المشاريع ومتابعة التنفيذ والموارد والمخاطر ضمن إطار احترافي.", en: "Project management, execution tracking, resources, and risks within a professional framework." },
+      ".certificate-card:nth-child(1) p": { ar: "اعتماد مهني: مهندس ميكانيكا بدرجة مستشار من الهيئة السعودية للمهندسين.", en: "Professional Accreditation: Mechanical Engineer with Consultant rank from the Saudi Council of Engineers." },
+      ".certificate-card:nth-child(2) p": { ar: "تدريب احترافي في إدارة الصيانة من الهيئة السعودية للمهندسين.", en: "Professional training in Maintenance Management from the Saudi Council of Engineers." },
+      "#tech .eyebrow": { ar: "الأنظمة والتكنولوجيا", en: "Systems & Technology" },
+      "#tech .section-title": { ar: "من التحكم اللحظي إلى الصيانة التنبؤية.", en: "From Real-time Control to Predictive Maintenance." },
+      "#tech .section-copy": { ar: "منظومة تشغيل رقمية تربط بيانات الأسطول، تخطيط الموارد، تحليل الأداء، والذكاء الاصطناعي لاتخاذ قرارات أدق وأسرع.", en: "A digital operational ecosystem linking fleet data, resource planning, performance analysis, and AI for faster, more accurate decisions." },
+      ".tech-panel:nth-child(1) h3": { ar: "ERP وموارد التشغيل", en: "ERP & Operational Resources" },
+      ".tech-panel:nth-child(1) p": { ar: "تخطيط موارد ومتابعة تكاليف وقرارات تشغيل عبر SAP وMicrosoft Dynamics وOdoo.", en: "Resource planning, cost tracking, and operational decisions via SAP, Microsoft Dynamics, and Odoo." },
+      ".tech-panel:nth-child(2) h3": { ar: "تحليل بيانات الأسطول", en: "Fleet Data Analysis" },
+      ".tech-panel:nth-child(2) p": { ar: "قياس الجاهزية والاستهلاك والتوقف وربط المؤشرات الفنية بربحية الأصل.", en: "Measuring readiness, consumption, downtime, and linking technical KPIs to asset profitability." },
+      ".tech-panel:nth-child(3) h3": { ar: "ذكاء اصطناعي وصيانة تنبؤية", en: "AI & Predictive Maintenance" },
+      ".tech-panel:nth-child(3) p": { ar: "استخدام AI لاكتشاف الأنماط، تقليل الأعطال المفاجئة، وتحسين توقيت الصيانة.", en: "Using AI to detect patterns, reduce sudden breakdowns, and optimize maintenance timing." },
+      "#gallery .eyebrow": { ar: "معرض العمليات", en: "Operations Gallery" },
+      "#gallery .section-title": { ar: "حضور ميداني من نيوم إلى العلا والبيئات الصحراوية الصعبة.", en: "Field Presence from NEOM to AlUla and Harsh Desert Environments." },
+      "#gallery .section-copy": { ar: "صور تشغيلية لأساطيل الجرافات والشاحنات، عمليات الحفر الليلية، تمهيد الطرق، وخطوط الخنادق في مواقع مختلفة.", en: "Operational photos of dozer and truck fleets, night excavation, road grading, and trenching in various sites." },
+      ".gallery-card:nth-child(1) span": { ar: "معرض التعدين بالسعودية", en: "Saudi Mining Exhibition" },
+      ".gallery-card:nth-child(2) span": { ar: "معرض تطوير قطاع المقاولات بمصر", en: "Contracting Sector Dev Exhibition - Egypt" },
+      ".gallery-card:nth-child(3) span": { ar: "موقع إثيوبيا", en: "Ethiopia Site" },
+      ".gallery-card:nth-child(4) span": { ar: "تدريب فولفو بالسويد", en: "Volvo Training - Sweden" },
+      ".gallery-card:nth-child(5) span": { ar: "تعاون مع شركات صينية", en: "Cooperation with Chinese Companies" },
+      ".gallery-card:nth-child(6) span": { ar: "تعاون مع موردين عالميين", en: "Global Suppliers Cooperation" },
+      ".gallery-card:nth-child(7) span": { ar: "تحميل الشاحنات", en: "Truck Loading" },
+      ".gallery-card:nth-child(8) span": { ar: "فرق التشغيل", en: "Operations Teams" },
+      "#contact .eyebrow": { ar: "التواصل", en: "Contact" },
+      "#contact .section-title": { ar: "جاهز للتعاون في إدارة الأصول، تشغيل الأساطيل، والتحول الرقمي.", en: "Ready to Collaborate in Asset Management, Fleet Operations, and Digital Transformation." },
+      "#contact .section-copy": { ar: "يمكن التواصل مباشرة عبر واتساب أو البريد الإلكتروني لمناقشة الاستشارات الهندسية، تطوير عمليات المعدات، أو مشاريع المنصات التقنية.", en: "Reach out directly via WhatsApp or Email to discuss engineering consulting, equipment operations development, or tech platform projects." },
+      ".contact-item:nth-child(1) strong": { ar: "الهاتف / واتساب - السعودية", en: "Phone / WhatsApp - Saudi Arabia" },
+      ".contact-item:nth-child(2) strong": { ar: "الهاتف / واتساب - مصر", en: "Phone / WhatsApp - Egypt" },
+      ".contact-item:nth-child(3) strong": { ar: "البريد الإلكتروني", en: "Email Address" },
+      ".contact-actions a:nth-child(1)": { ar: "إرسال بريد", en: "Send Email" },
+      ".contact-actions a:nth-child(2)": { ar: "تواصل واتساب", en: "Contact via WhatsApp" },
+      ".contact-form input[name='name']": { ar: "الاسم", en: "Name", attr: "placeholder" },
+      ".contact-form input[name='email']": { ar: "البريد الإلكتروني", en: "Email Address", attr: "placeholder" },
+      ".contact-form textarea[name='message']": { ar: "اكتب رسالتك", en: "Write your message", attr: "placeholder" },
+      ".contact-form button": { ar: "إرسال الرسالة", en: "Send Message" },
+      "footer .container": { ar: "المهندس عمرو هاشم - مستشار هندسي وإدارة عمليات المعدات الثقيلة والتحول الرقمي", en: "Eng. Amr Hashim - Engineering Consultant & Heavy Equipment Operations Strategist" }
+    };
+
+    let currentLang = "ar";
+    const langBtn = document.getElementById("langToggle");
+    const htmlTag = document.documentElement;
+
+    function applyLanguage(lang) {
+      currentLang = lang;
+      htmlTag.lang = lang;
+      htmlTag.dir = lang === "ar" ? "rtl" : "ltr";
+      langBtn.textContent = lang === "ar" ? "English" : "عربي";
+      
+      for (const [selector, value] of Object.entries(dict)) {
+        const el = document.querySelector(selector);
+        if (el) {
+          if (value.attr) {
+            el.setAttribute(value.attr, value[lang]);
+          } else {
+            el.innerHTML = value[lang];
+          }
+        }
+      }
+    }
+
+    langBtn.addEventListener("click", () => {
+      applyLanguage(currentLang === "ar" ? "en" : "ar");
+    });
+  </script>
+</body>
+</html>
